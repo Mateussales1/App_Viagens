@@ -8,7 +8,7 @@ import android.widget.ListView;
 import com.mateus.viagens.DAO.PacoteDAO;
 import com.mateus.viagens.R;
 import com.mateus.viagens.ui.activity.model.Pacote;
-import com.mateus.viagens.ui.adapter.ListaPacotesAdapter;
+import com.mateus.viagens.adapter.ListaPacotesAdapter;
 
 import java.util.List;
 

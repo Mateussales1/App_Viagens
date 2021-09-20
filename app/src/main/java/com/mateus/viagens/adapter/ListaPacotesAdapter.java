@@ -1,10 +1,14 @@
-package com.mateus.viagens.ui.adapter;
+package com.mateus.viagens.adapter;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.mateus.viagens.R;
 import com.mateus.viagens.ui.activity.model.Pacote;
@@ -40,6 +44,24 @@ public class ListaPacotesAdapter extends BaseAdapter {
     @Override
     public View getView(int posicao, View convertView, ViewGroup parent) {
         View viewCriada = LayoutInflater.from(context).inflate(R.layout.item_pacote, parent, false);
+
+        Pacote pacote = pacotes.get(posicao);
+
+        TextView local = viewCriada.findViewById(R.id.item_pacote_local);
+        local.setText(pacote.getLocal());
+
+        ImageView imagem = viewCriada.findViewById(R.id.item_pacote_imagem);
+        Resources resources = context.getResources();
+        int idDoDrawable = resources.getIdentifier(pacote.getImagem(), "drawable", context.getPackageName());
+        Drawable drawableImagemPacote = resources.getDrawable(idDoDrawable);
+        imagem.setImageDrawable(drawableImagemPacote);
+
+        TextView dias = viewCriada.findViewById(R.id.item_pacote_dias);
+        dias.setText(pacote.getDias() + " dias");
+
+        TextView preco = viewCriada.findViewById(R.id.item_pacote_preco);
+        preco.setText(pacote.getPreco().toString());
+
         return viewCriada;
     }
 }
