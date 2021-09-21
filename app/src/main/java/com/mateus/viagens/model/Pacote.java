@@ -1,4 +1,4 @@
-package com.mateus.viagens.ui.activity.model;
+package com.mateus.viagens.model;
 
 import java.math.BigDecimal;
 

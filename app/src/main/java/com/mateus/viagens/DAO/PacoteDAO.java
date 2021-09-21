@@ -1,6 +1,6 @@
 package com.mateus.viagens.DAO;
 
-import com.mateus.viagens.ui.activity.model.Pacote;
+import com.mateus.viagens.model.Pacote;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
