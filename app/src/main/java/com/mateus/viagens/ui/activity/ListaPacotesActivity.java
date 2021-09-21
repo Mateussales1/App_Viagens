@@ -23,5 +23,6 @@ public class ListaPacotesActivity extends AppCompatActivity {
         List<Pacote> pacotes = new PacoteDAO().lista();
         listaDePacotes.setAdapter(new ListaPacotesAdapter(pacotes, this
         ));
+        setTitle("Pacotes");
     }
 }
